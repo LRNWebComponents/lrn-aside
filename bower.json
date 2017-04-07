@@ -4,7 +4,11 @@
   "main": "lrn-aside.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "lrnsys-behaviors": "LRNWebComponents/lrnsys-behaviors#^1.0.0"
+    "lrnsys-behaviors": "LRNWebComponents/lrnsys-behaviors#^1.0.0",
+    "lrndesign-card": "LRNWebComponents/lrndesign-card#^0.0.1",
+    "lrndesign-drawer": "LRNWebComponents/lrndesign-drawer#^0.0.2",
+    "paper-card": "^0.1.5",
+    "lrndesign-contentblock": "LRNWebComponents/lrndesign-contentblock#^0.0.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
