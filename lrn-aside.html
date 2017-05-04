@@ -19,13 +19,25 @@ A LRN element
     <style>
       :host {
         display: flex;
-        width: 100%;
+      }
+      .sticky {
+        top:0;
+        position: fixed;
+        width: 25vw;
+        height: 50vh;
+        overflow: scroll;
+      }
+      .hang-left {
+        left: 0;
+      }
+      .hang-right {
+        right: 0;
       }
       paper-card {
         width: 100%;
       }
     </style>
-    <aisde>
+    <aside class$="{{_makeClass(sticky, direction)}}">
       <!-- big switch statement for the different display modes we support here -->
       <template is="dom-if" if="{{matchDisplay('paper-card', display)}}">
         <paper-card heading="{{title}}" image="{{image}}" elevation="1" animated-shadow="false">
@@ -51,11 +63,11 @@ A LRN element
         </lrndesign-contentblock>
       </template>
       <template is="dom-if" if="{{matchDisplay('panelcard', display)}}">
-        <lrndesign-panelcard title="{{title}}" display-style="{{displayStyle}}">
+        <lrndesign-panelcard show-hax title="{{title}}" display-style="{{displayStyle}}">
           <content></content>
         </lrndesign-panelcard>
       </template>
-    </aisde>
+    </aside>
   </template>
 
   <script>
@@ -69,8 +81,45 @@ A LRN element
         title: {
           type: String,
           value: 'Related content',
+          reflectToAttribute: true,
+          notify: true,
+        },
+        /**
+         * Apply CSS sticky styling
+         */
+        sticky: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true,
+          notify: true,
+        },
+        /**
+         * Direction to hang off UI if sticky, left or right.
+         */
+        direction: {
+          type: String,
+          value: '',
+          reflectToAttribute: true,
+          notify: true,
         }
       },
+      /**
+       * Generate a class from some options on the host element
+       */
+      _makeClass: function(sticky, direction) {
+        var str = 'aside';
+        if (sticky) {
+          str += ' sticky';
+        }
+        // allow for right / left variations of sticky
+        if (direction == 'right') {
+          str += ' hang-right';
+        }
+        else if (direction == 'left') {
+          str += ' hang-left';
+        }
+        return str;
+      }
     });
   </script>
 </dom-module>
