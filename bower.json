@@ -9,7 +9,7 @@
     "lrndesign-drawer": "LRNWebComponents/lrndesign-drawer#^0.0.2",
     "paper-card": "^0.1.5",
     "lrndesign-contentblock": "LRNWebComponents/lrndesign-contentblock#^0.0.1",
-    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^0.0.6"
+    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^0.0.13"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
