@@ -6,6 +6,7 @@
 <link rel="import" href="../lrndesign-contentblock/lrndesign-contentblock.html">
 <link rel="import" href="../lrnsys-behaviors/lrnsys-behaviors.html">
 <link rel="import" href="../lrndesign-panelcard/lrndesign-panelcard.html">
+<link rel="import" href="../lrndesign-blockquote/lrndesign-blockquote.html">
 
 <!--
 `lrn-aside`
@@ -19,7 +20,7 @@ A LRN element
     <style>
       :host {
         display: flex;
-		padding: .5em;
+		    padding: .5em;
       }
       :host[sticky] {
         top:0;
@@ -47,25 +48,30 @@ A LRN element
         </paper-card>
       </template>
       <template is="dom-if" if="{{matchDisplay('card', display)}}">
-        <lrndesign-card title="{{title}}" image="{{image}}">
+        <lrndesign-card show-hax$="{{showHax}}" title="{{title}}" image="{{image}}">
           <content></content>
         </lrndesign-card>
       </template>
       <template is="dom-if" if="{{matchDisplay('drawer', display)}}">
-        <lrndesign-drawer icon="lrn-icons:assignment" align="right">
+        <lrndesign-drawer show-hax$="{{showHax}}" icon="lrn-icons:assignment" align="right">
           <h2>{{title}}</h2>
           <content></content>
         </lrndesign-drawer>
       </template>
       <template is="dom-if" if="{{matchDisplay('contentblock', display)}}">
-        <lrndesign-contentblock title="{{title}}" persistent>
+        <lrndesign-contentblock show-hax$="{{showHax}}" title="{{title}}" persistent>
           <content></content>
         </lrndesign-contentblock>
       </template>
       <template is="dom-if" if="{{matchDisplay('panelcard', display)}}">
-        <lrndesign-panelcard title="{{title}}" display-style="{{displayStyle}}">
+        <lrndesign-panelcard show-hax$="{{showHax}}" title="{{title}}" display-style="{{displayStyle}}">
           <content></content>
         </lrndesign-panelcard>
+      </template>
+      <template is="dom-if" if="{{matchDisplay('blockquote', display)}}">
+        <lrndesign-blockquote show-hax$="{{showHax}}" decorate citation="{{title}}">
+          <content></content>
+        </lrndesign-blockquote>
       </template>
     </aside>
   </template>
@@ -75,6 +81,12 @@ A LRN element
       is: 'lrn-aside',
       behaviors: [LRNBehaviors.DisplayBehaviors],
       properties: {
+        showHax: {
+          type: Boolean,
+          value: false,
+          reflectAttribute: true,
+          notify: true,
+        },
         /**
          * Title for the aside.
          */

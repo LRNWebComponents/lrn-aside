@@ -9,7 +9,11 @@
     "lrndesign-drawer": "LRNWebComponents/lrndesign-drawer#^0.0.2",
     "paper-card": "^0.1.5",
     "lrndesign-contentblock": "LRNWebComponents/lrndesign-contentblock#^0.0.1",
-    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^0.0.13"
+    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^0.0.14",
+    "hax-editable": "LRNWebComponents/hax-editable#^0.0.3",
+    "hax-editbar": "LRNWebComponents/hax-editbar#^0.1.0",
+    "hax-behaviors": "LRNWebComponents/hax-behaviors#^0.0.14",
+    "lrndesign-blockquote": "LRNWebComponents/lrndesign-blockquote#^0.0.8"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
