@@ -4,7 +4,7 @@
   "main": "lrn-aside.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.11.0",
-    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^1.1.1",
+    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^1.1.2",
     "hax-body-behaviors": "LRNWebComponents/hax-body-behaviors#^1.12.5"
   },
   "devDependencies": {
