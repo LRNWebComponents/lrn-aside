@@ -3,8 +3,9 @@
   "description": "A LRN element",
   "main": "lrn-aside.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
-    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^1.0.0"
+    "polymer": "Polymer/polymer#^1.11.0",
+    "lrndesign-panelcard": "LRNWebComponents/lrndesign-panelcard#^1.1.1",
+    "hax-body-behaviors": "LRNWebComponents/hax-body-behaviors#^1.12.5"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
